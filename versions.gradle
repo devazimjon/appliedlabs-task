@@ -1,0 +1,74 @@
+def libs = [:]
+ext.Libs = libs
+
+def versions = [:]
+ext.Versions = versions
+
+libs.Core = "androidx.core:core-ktx:$versions.kotlin"
+
+versions.kotlin = "1.5.0"
+libs.Kotlin = [
+        stdlib       : "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
+        kotlinAndroid: "org.jetbrains.kotlin.android:$versions.kotlin",
+        gradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        buildTools   : "com.android.tools.build:gradle:4.2.1",
+]
+
+libs.View = [
+        constraint: "androidx.constraintlayout:constraintlayout:2.0.4",
+        material  : "com.google.android.material:material:1.4.0",
+        design    : "com.android.support:design:30.0.2",
+        appCompat : "androidx.appcompat:appcompat:1.3.1",
+        recycler  : "androidx.recyclerview:recyclerview:1.2.0-beta02",
+        cardView  : "androidx.cardview:cardview:1.0.0",
+]
+
+versions.dagger = "2.37"
+libs.Dagger = [
+        dagger  : "com.google.dagger:dagger:$versions.dagger",
+        compiler: "com.google.dagger:dagger-compiler:$versions.dagger",
+]
+
+versions.retrofit = "2.9.0"
+libs.Retrofit = [
+        retrofit              : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        serializarionConverter: "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+]
+
+versions.okHttp = "4.9.1"
+libs.OkHttp = [
+        okhttp            : "com.squareup.okhttp3:okhttp:$versions.okHttp",
+        loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
+]
+
+versions.nav_version = "2.3.5"
+libs.Navigation = [
+        fragmentKtx    : "androidx.navigation:navigation-fragment-ktx:$versions.nav_version",
+        safeargsPlugin : "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.nav_version",
+        navigationUIKtx: "androidx.navigation:navigation-ui-ktx:$versions.nav_version",
+]
+
+versions.coroutines_version = "1.4.1"
+libs.Coroutines = [
+        core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines_version",
+        android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines_version",
+]
+
+versions.room_version = "2.3.0"
+libs.Room = [
+        runtime : "androidx.room:room-runtime:$versions.room_version",
+        compiler: "androidx.room:room-compiler:$versions.room_version",
+        roomKtx : "androidx.room:room-ktx:$versions.room_version",
+]
+
+versions.lifecycle = "2.3.1"
+libs.Lifecycle = [
+        commonJava  : "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle",
+        viewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+        livedata    : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+]
+
+
+versions.google_services = "4.3.10"
+libs.GoogleServicesPlugin = "com.google.gms:google-services:4.3.10"
+libs.SerializationPlugin = "org.jetbrains.kotlin:kotlin-serialization:$versions.kotlin"

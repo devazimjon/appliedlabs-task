@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="AppTheme.TextView.Default" parent="android:style/Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/font_family_montserrat</item>
+    </style>
+
+</resources>

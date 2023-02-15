@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YandexSimulator</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="confirm_exit_app">are you sure</string>
+    <string name="from_location">From location</string>
+    <string name="to_location">To location</string>
+    <string name="start_button">To location</string>
+    <string name="next">Next</string>
+</resources>

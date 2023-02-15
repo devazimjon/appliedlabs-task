@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.SearchWindowTheme" parent="AppTheme.BaseTheme">
+        <item name="colorPrimary">@color/black</item>
+        <item name="textInputStyle">@style/Widget.YandexSimulator.TextInputLayout.Primary</item>
+        <item name="editTextStyle">@style/Widget.YandexSimulator.TextInputEditText.Primary</item>
+    </style>
+
+    <style name="Widget.YandexSimulator.TextInputLayout.Primary" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="android:textColorHint">@color/textSecondary</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="hintTextAppearance">@style/Text.Regular.14</item>
+        <item name="android:textAppearance">@style/Text.Medium.20</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+
+    </style>
+
+    <style name="Widget.YandexSimulator.TextInputEditText.Primary" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/Text.Medium.20</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+        <item name="colorPrimary">@color/black</item>
+
+    </style>
+
+
+</resources>

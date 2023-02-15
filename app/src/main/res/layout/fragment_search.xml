@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:theme="@style/AppTheme.SearchWindowTheme"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_keyboard_backspace"
+            app:title="Specify place to dispatch" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--    From Location Group-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/from_location_tl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.YandexSimulator.TextInputLayout.Primary"
+        android:layout_marginTop="12dp"
+        android:hint="@string/from_location"
+        app:layout_constraintEnd_toStartOf="@id/from_map_iv"
+        app:layout_constraintStart_toEndOf="@id/from_location_iv"
+        app:layout_constraintTop_toBottomOf="@id/guideline_from">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/from_location_et"
+            style="@style/Widget.YandexSimulator.TextInputEditText.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/from_location_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@id/from_location_tl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/from_location_tl" />
+
+    <ImageView
+        android:id="@+id/from_map_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/map_pick_ic_bck"
+        android:elevation="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_pick_map"
+        app:layout_constraintBottom_toBottomOf="@id/from_location_tl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/from_location_tl" />
+
+    <!--    ToLocation Group-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        app:layout_constraintEnd_toEndOf="@id/from_map_iv"
+        app:layout_constraintStart_toStartOf="@id/from_location_tl"
+        app:layout_constraintTop_toTopOf="@id/guideline_to" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/to_location_tl"
+        style="@style/Widget.YandexSimulator.TextInputLayout.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/to_location"
+        app:layout_constraintEnd_toStartOf="@id/from_map_iv"
+        app:layout_constraintStart_toEndOf="@id/from_location_iv"
+        app:layout_constraintTop_toBottomOf="@id/guideline_to">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/to_location_et"
+            style="@style/Widget.YandexSimulator.TextInputEditText.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/to_location_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@id/to_location_tl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/to_location_tl" />
+
+    <ImageView
+        android:id="@+id/to_map_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/map_pick_ic_bck"
+        android:elevation="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_pick_map"
+        app:layout_constraintBottom_toBottomOf="@id/to_location_tl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/to_location_tl" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/from_location_iv" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/to_location_iv" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dotted_line_vertical"
+        app:layout_constraintBottom_toTopOf="@id/guideline_2"
+        app:layout_constraintEnd_toEndOf="@id/from_location_iv"
+        app:layout_constraintStart_toStartOf="@id/from_location_iv"
+        app:layout_constraintTop_toBottomOf="@id/guideline_1" />
+
+    <View
+        android:id="@+id/divider_location"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_location_tl" />
+
+    <LinearLayout
+        android:id="@+id/favorite_lay"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/divider_location">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="Favorite address"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_forward" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_favorite"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favorite_lay" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_favorite">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/address_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/teal_200"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/from_location_tl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
